@@ -23,7 +23,7 @@ public class NinjaService {
     //Listar todos os meus ninjas por ID
     public NinjaModel listarNinjasPorId(long id) {
         Optional<NinjaModel> ninjaPorId = ninjaRepository.findById(id);
-        return ninjaPorId.orElse(null)  ;
+        return ninjaPorId.orElse(null) ;
     }
 
 }

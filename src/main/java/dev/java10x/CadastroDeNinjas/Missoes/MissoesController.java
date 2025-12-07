@@ -19,6 +19,10 @@ public class MissoesController {
     public List<MissoesModel> listarMissoes(){
         return missoesService.listarMiissoes()      ;
     }
+    @GetMapping("/listar/{id}")
+    public MissoesModel listarMissoesPorId(@PathVariable Long id) {
+        return missoesService.buscarMissoesPorId(id);
+    }
 
     // POST -- Mandar uma requisição para criar as missões
     @PostMapping("/criar")
